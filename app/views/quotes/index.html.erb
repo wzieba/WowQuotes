@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="col-xs-12" style="height:50px;"></div>
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-4">
+      <h1>Listing Quotes</h1>
+      <div class="col-xs-12" style="height:50px;"></div>
+      <ul class="list-group">
+        <% @quotes.each do |quote| %>
+          <li class="list-group-item">
+            <center><i>„<%= quote.text %>”</i></center>
+          </li>
+        <% end %>
+      </ul>
+      <div class="col-xs-12" style="height:50px;"></div>
+      <%= link_to "<button type='button' class='btn btn-primary btn-block'>New quote</button>".html_safe, new_quote_path %>
+    </div>
+  </div>
+</div>
